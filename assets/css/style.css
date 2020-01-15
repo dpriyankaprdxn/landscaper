@@ -87,7 +87,8 @@ body {
   font-family: sans-serif;
 }
 
-a { 
+a {   
+  cursor: pointer;
   display: inline-block;
   text-decoration: none; 
 }
@@ -100,7 +101,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 85%; 
   margin: 0 auto;
 }
 /*=================================
@@ -112,7 +113,6 @@ header {
   background-color: #363636;
 }
 
-h1 { margin-left: 1%; }
 
 header .flex-container {
   display: flex;
@@ -127,7 +127,7 @@ nav a {
   text-transform: uppercase;
 }
 
-.banner {background: url('https://via.placeholder.com/1350x766');}
+nav a:hover, .active { color: #69ad31; }
 
 /*=================================
   Header styling ends here
@@ -137,12 +137,105 @@ nav a {
   main styling starts here
 =================================*/
 
+.banner {
+  background: url('https://via.placeholder.com/1284x729');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
+.banner-one {
+  padding: 310px 0px 200px 0px;
+  text-align: center;
+  color: #fff;
+}
 
+.banner-one h2 {
+  font:55px bold;
+  text-transform: uppercase;
+}
 
+.banner-one p { 
+  margin: 20px 28%;
+  font-size: 18px;
+}
+ .banner-one a {
+  width: 138px;
+  padding: 15px 2px;
+  border-radius:10%;
+  margin-top: 30px;
+  background-color: #69ac31;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+ }
 
+.welcome-to-landscaper ul {
+  margin-top: 115px;
+  margin-bottom: 120px;
+  display: flex;
+}
 
+.welcome-to-landscaper li {  justify-content: space-around; }
+.welcome-to-landscaper p{ font-size: 14px; }
 
+.welcome-to-landscaper h3 { font-size: 32px; }
+
+.welcome-to-landscaper h3 span{ 
+  color: #6eab51;
+  text-transform:capitalize;
+}
+
+.our-services { 
+  background-color: #69ac31;
+  color: #fff;
+  text-align: center;
+}
+
+.our-services h4 {
+ padding-top: 120px;
+ margin-bottom: 23px;
+ font-size: 35px;
+ text-transform: capitalize;
+}
+
+.short-line {
+  width: 67px;
+  padding: 1px 0px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.customp {
+  margin-top: 25px;
+  margin-bottom: 85px;
+  font-size: 18px;
+}
+
+.our-services ul {
+  padding-bottom: 150px;
+  margin-bottom:100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-services li{ width: 23%; }
+
+.our-services img {
+  width: 75%;
+  border-radius: 50%;
+  border: 10px solid #78b546;
+}
+
+.our-services h5 {
+  margin: 25px 0px;
+  font-size:22px;
+  text-transform: capitalize;
+}
+
+.our-services li p{
+  padding: 0px 3px;
+  font-size: 14px;
+}
 
 /*=================================
   main styling ends here
