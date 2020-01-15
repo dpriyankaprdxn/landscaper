@@ -136,12 +136,15 @@ nav a:hover, .active { color: #69ad31; }
 /*=================================
   main styling starts here
 =================================*/
+p { color: #666; }
 
 .banner {
   background: url('https://via.placeholder.com/1284x729');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+
+.banner p, .our-services p { color: #fff; }
 
 .banner-one {
   padding: 310px 0px 200px 0px;
@@ -237,6 +240,44 @@ nav a:hover, .active { color: #69ad31; }
   font-size: 14px;
 }
 
+.project-gallery { 
+  margin-bottom: 112px;
+  text-align: center;
+}
+
+.project-gallery .short-line { background-color: #69ac31; }
+
+.project-gallery h5 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.project-gallery p:first-of-type { 
+  margin:25px 0px 60px 0px;
+  font-size: 18px;
+}
+.project-gallery-menu { margin-bottom: 50px; }
+
+.project-gallery-menu a {
+  padding: 10px 10px;
+  margin-left: 9px;
+  text-transform: uppercase;
+  background-color: #e5e5e5;
+  color: #666;
+}
+
+.project-gallery-menu .active, .project-gallery-menu a:hover { 
+  background-color: #69ac31;
+  color: #fff;
+}
+
+.project-gallery ul:last-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-gallery ul:last-of-type li{ margin-bottom: 32px; }
 /*=================================
   main styling ends here
 =================================*/
