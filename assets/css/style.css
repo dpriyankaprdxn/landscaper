@@ -429,6 +429,25 @@ input[type="submit"] {
   footer styling starts here
 =================================*/ 
 
+footer {
+  padding: 40px 0px 30px 0px;
+  background-color:#363636;
+  text-align: center;
+}
+
+.footer-social { margin-bottom: 48px; }
+
+.footer-social .fa{
+ padding:10px;
+ margin-left: 2%;
+ border-radius: 50%;
+ background-color: #464646;
+ color: #68aa30;
+ font-size: 20px;
+}
+
+.footer-social li { margin-left: 3%; }
+
  /*=================================
   footer styling ends here
 =================================*/ 
