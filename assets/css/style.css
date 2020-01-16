@@ -144,7 +144,7 @@ p { color: #666; }
   background-size: 100% 100%;
 }
 
-.banner p, .our-services p { color: #fff; }
+.banner p, .our-services p, .testimonial p { color: #fff; }
 
 .banner-one {
   padding: 310px 0px 200px 0px;
@@ -172,18 +172,20 @@ p { color: #666; }
   text-transform: uppercase;
  }
 
-.welcome-to-landscaper ul {
+.landscaper ul {
   margin-top: 115px;
   margin-bottom: 120px;
   display: flex;
+  justify-content: space-around;
 }
 
-.welcome-to-landscaper li {  justify-content: space-around; }
-.welcome-to-landscaper p{ font-size: 14px; }
+.llandscaper li { width: 25%; }
 
-.welcome-to-landscaper h3 { font-size: 32px; }
+.landscaper p{ font-size: 14px; }
 
-.welcome-to-landscaper h3 span{ 
+.landscaper h3 { font-size: 32px; }
+
+.landscaper h3 span{ 
   color: #6eab51;
   text-transform:capitalize;
 }
@@ -278,6 +280,39 @@ p { color: #666; }
 }
 
 .project-gallery ul:last-of-type li{ margin-bottom: 32px; }
+
+.testimonial { 
+  padding: 120px 0px;
+  color: #fff;
+  background:  url('https://via.placeholder.com/1284x500.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center; 
+}
+
+.testimonial h6 { 
+  margin-bottom: 24px;
+  font-size: 35px;
+}
+
+.testimonials-block p:first-of-type{
+  padding: 0px 105px; 
+  margin: 75px 0px 25px 0px;
+  line-height: 30px;
+}
+
+.testimonials-block p:last-of-type{ text-transform: capitalize; }
+
+.testimonials-block li:last-child span { text-transform: uppercase; }
+
+.slider-dots a {
+  width: 12px;
+  height: 12px;
+  margin: 30px 12px 0px 0px;
+  border-radius: 50%;
+  background:#fff;
+}
 /*=================================
   main styling ends here
 =================================*/
