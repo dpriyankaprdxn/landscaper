@@ -89,6 +89,9 @@ body {
 
 a {   
   cursor: pointer;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
   display: inline-block;
   text-decoration: none; 
 }
@@ -115,7 +118,11 @@ header {
 
 
 header .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;    
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -129,6 +136,21 @@ nav a {
 
 nav a:hover, .active { color: #69ad31; }
 
+.toggle { 
+    padding: 2px 2%;
+  border:1px solid #9a9a9a;
+  display: none;
+  background:  #363636;
+}
+
+.toggle span { 
+width: 90px;
+    padding: 4px 1%;
+    margin: 18px 2px;
+    display: block;
+    background: #69ad31;
+}
+
 /*=================================
   Header styling ends here
 =================================*/  
@@ -138,6 +160,7 @@ nav a:hover, .active { color: #69ad31; }
 =================================*/
 p, address, .contact-info a { color: #666; }
 
+/*  Banner styling start here */
 .banner {
   background: url('https://via.placeholder.com/1284x729');
   background-repeat: no-repeat;
@@ -146,24 +169,27 @@ p, address, .contact-info a { color: #666; }
 
 .banner p, .our-services p, .testimonial p { color: #fff; }
 
-.banner-one {
+.banner-text {
   padding: 310px 0px 200px 0px;
   text-align: center;
   color: #fff;
 }
 
-.banner-one h2 {
-  font:55px bold;
+.banner-text h2 {
+  font: 55px bold;
   text-transform: uppercase;
 }
 
-.banner-one p { 
-  margin: 20px 28%;
+.banner-text p { 
+  width: 45%;
+  margin: 20px auto;
   font-size: 18px;
 }
- .banner-one a {
-  width: 138px;
-  padding: 15px 2px;
+
+ .banner-text a {
+  width: 14%;
+  padding: 15px 1%;
+  border:1px solid transpernt;
   border-radius:6px;
   margin-top: 30px;
   background-color: #69ac31;
@@ -171,6 +197,14 @@ p, address, .contact-info a { color: #666; }
   font-size: 16px;
   text-transform: uppercase;
  }
+
+ .banner-text a:hover,
+ .landscaper a:hover {
+  border:1px solid  #69ac31;
+  background-color:  #fff;
+  color: #69ac31;
+ }
+/*  Banner styling end here */
 
 .landscaper ul {
   margin-top: 115px;
@@ -184,7 +218,7 @@ p, address, .contact-info a { color: #666; }
 .landscaper li:first-child { 
   flex-basis: 48%;
   text-align:justify;
-  }
+}
 
 .landscaper p{ 
   margin-top: 30px;
@@ -193,28 +227,26 @@ p, address, .contact-info a { color: #666; }
 }
 
 .landscaper a { 
-  margin-top: 52px;
   padding: 20px;
+  margin-top: 52px;
   border-radius: 6px;
   background-color: #69ac31;
   color: #fff;
   text-transform: uppercase;
 }
 
-.landscaper h3 { 
-  margin-bottom: 24PX;
-  font-size: 35px;
-}
+h3 { font-size: 35px; }
+
+h4 { font-size:22px; }
+
+.lanscaper h3 { margin-bottom: 24PX; }
 
 .landscaper h3 span { 
   color: #6eab51;
   text-transform:capitalize;
 }
 
-.landscaper h4{
-  margin-top:24px;
-  font-size:22px;
-}
+.landscaper h4{ margin-top:24px; }
 
 .our-services { 
   background-color: #69ac31;
@@ -222,11 +254,10 @@ p, address, .contact-info a { color: #666; }
   text-align: center;
 }
 
-.our-services h4 {
- padding-top: 120px;
- margin-bottom: 23px;
- font-size: 35px;
- text-transform: capitalize;
+.our-services h3 {
+  padding-top: 120px;
+  margin-bottom: 23px;
+  text-transform: capitalize;
 }
 
 .short-line {
@@ -257,9 +288,8 @@ p, address, .contact-info a { color: #666; }
   border: 10px solid #78b546;
 }
 
-.our-services h5 {
+.our-services h4 {
   margin: 25px 0px;
-  font-size:22px;
   text-transform: capitalize;
 }
 
@@ -278,8 +308,8 @@ p, address, .contact-info a { color: #666; }
 .landscaper .short-line { margin: 0 }
 
 .project-gallery h5 {
-  font-size: 36px;
   margin-bottom: 20px;
+  font-size: 36px;
 }
 
 .project-gallery p:first-of-type { 
@@ -290,8 +320,8 @@ p, address, .contact-info a { color: #666; }
 
 .project-gallery-menu a {
   padding: 10px 10px;
-  margin-left: 9px;
   border-radius: 6px;
+  margin-left: 9px;
   text-transform: uppercase;
   background-color: #e5e5e5;
   color: #666;
@@ -310,14 +340,32 @@ p, address, .contact-info a { color: #666; }
 
 .project-gallery ul:last-of-type li { margin-bottom: 32px; }
 
+.project-gallery a:hover {
+  transform: scale(1.1);
+}
+
 .testimonial { 
   padding: 120px 0px;
+  position: relative;
   color: #fff;
-  background: linear-gradient(#69ad31,#69ad31), url('https://via.placeholder.com/1284x500.png');
+  background: url('https://via.placeholder.com/1284x500.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   text-align: center; 
+}
+
+.testimonial .wrapper { position: relative; }
+
+.testimonial:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #69ac31;
+  opacity: .7;
 }
 
 .testimonial h6 { 
@@ -332,10 +380,7 @@ p, address, .contact-info a { color: #666; }
 }
 
 .testimonials-block p:last-of-type { text-transform: capitalize; }
-
 .testimonials-block li:not(:first-child) { display: none; }
-
-.testimonials-block li:last-child span { text-transform: uppercase; }
 
 .slider-dots a {
   width: 12px;
@@ -344,6 +389,8 @@ p, address, .contact-info a { color: #666; }
   border-radius: 50%;
   background:#fff;
 }
+
+.silder-dots a:hover { color:  grey; }
 
 .contact-us { 
   padding: 102px 0px 90px 0px;
@@ -367,17 +414,11 @@ p, address, .contact-info a { color: #666; }
   align-content:center;
 }
 
-.contact-info p:first-of-type {
-  font-size: 18px;
-  margin: 10px 0px;
-  color: #000;
-  text-transform: uppercase;
-}
-
 .contact-info p, .contact-us address { 
   padding: 0px 15px;
+  margin: 10px 0px;
   line-height: 20px;
- }
+}
 
 .leavemsg { 
   margin: 40px 0px;
@@ -386,41 +427,32 @@ p, address, .contact-info a { color: #666; }
   text-transform: uppercase;
 }
 
-.contactform { 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content:center;
+.contactform { margin: 0 auto }
+
+.contactform li:first-of-type { margin-right: 5%; }
+
+.block { display: block; }
+
+input[type=text], input[type=email] {
+  padding: 13px 25%;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 
-.contactform li{ margin-bottom: 17px; }
-
-.contactform li:first-child { 
-  display: flex; 
-  justify-content: center;
-  align-items: center; 
-}
-
-.form-group { 
-  margin-left: 5%;
-}
-.contactform input[type="text"], 
-.contactform input[type="email"] { padding: 12px 20%; }
-
-textarea { 
-  width: 589px;
-  height: 120px;
-  margin-left: 3%;
-  /* padding: 30px 15%; */
+textarea {
+  padding: 40px 21%;
+  margin: 10px 23%;
+  box-sizing: border-box;
 }
 
 input[type="submit"] { 
   padding: 15px;
+  border:none;
   border-radius: 6px;
   background-color: #69ac31;
   color: #fff;
   text-transform: uppercase;
- }
+}
 /*=================================
   main styling ends here
 =================================*/
@@ -438,15 +470,19 @@ footer {
 .footer-social { margin-bottom: 48px; }
 
 .footer-social .fa{
- padding:10px;
- margin-left: 2%;
- border-radius: 50%;
- background-color: #464646;
- color: #68aa30;
- font-size: 20px;
+  padding:10px;
+  margin-left: 2%;
+  border-radius: 50%;
+  background-color: #464646;
+  color: #68aa30;
+  font-size: 20px;
 }
 
 .footer-social li { margin-left: 3%; }
+
+footer a { color: grey; }
+
+footer a:hover { color: #68aa30; }
 
  /*=================================
   footer styling ends here
@@ -456,6 +492,15 @@ footer {
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
+ 
 
+.toggle { 
+  display:block;
+  float: right;
+}
+
+.toggle:hover + nav{
+display: block; 
+}
 
 }  
