@@ -136,7 +136,7 @@ nav a:hover, .active { color: #69ad31; }
 /*=================================
   main styling starts here
 =================================*/
-p { color: #666; }
+p, address, .contact-info a { color: #666; }
 
 .banner {
   background: url('https://via.placeholder.com/1284x729');
@@ -144,7 +144,7 @@ p { color: #666; }
   background-size: 100% 100%;
 }
 
-.banner p, .our-services p { color: #fff; }
+.banner p, .our-services p, .testimonial p { color: #fff; }
 
 .banner-one {
   padding: 310px 0px 200px 0px;
@@ -164,7 +164,7 @@ p { color: #666; }
  .banner-one a {
   width: 138px;
   padding: 15px 2px;
-  border-radius:10%;
+  border-radius:6px;
   margin-top: 30px;
   background-color: #69ac31;
   color: #fff;
@@ -172,20 +172,48 @@ p { color: #666; }
   text-transform: uppercase;
  }
 
-.welcome-to-landscaper ul {
+.landscaper ul {
   margin-top: 115px;
   margin-bottom: 120px;
   display: flex;
+  justify-content: space-between;
 }
 
-.welcome-to-landscaper li {  justify-content: space-around; }
-.welcome-to-landscaper p{ font-size: 14px; }
+.landscaper li:not(:first-child) { flex-basis:  24%; }
 
-.welcome-to-landscaper h3 { font-size: 32px; }
+.landscaper li:first-child { 
+  flex-basis: 48%;
+  text-align:justify;
+  }
 
-.welcome-to-landscaper h3 span{ 
+.landscaper p{ 
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.landscaper a { 
+  margin-top: 52px;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: #69ac31;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.landscaper h3 { 
+  margin-bottom: 24PX;
+  font-size: 35px;
+}
+
+.landscaper h3 span { 
   color: #6eab51;
   text-transform:capitalize;
+}
+
+.landscaper h4{
+  margin-top:24px;
+  font-size:22px;
 }
 
 .our-services { 
@@ -245,7 +273,9 @@ p { color: #666; }
   text-align: center;
 }
 
-.project-gallery .short-line { background-color: #69ac31; }
+.project-gallery .short-line, .contact-us .short-line, .landscaper .short-line { background-color: #69ac31; }
+
+.landscaper .short-line { margin: 0 }
 
 .project-gallery h5 {
   font-size: 36px;
@@ -261,6 +291,7 @@ p { color: #666; }
 .project-gallery-menu a {
   padding: 10px 10px;
   margin-left: 9px;
+  border-radius: 6px;
   text-transform: uppercase;
   background-color: #e5e5e5;
   color: #666;
@@ -277,7 +308,119 @@ p { color: #666; }
   justify-content: space-between;
 }
 
-.project-gallery ul:last-of-type li{ margin-bottom: 32px; }
+.project-gallery ul:last-of-type li { margin-bottom: 32px; }
+
+.testimonial { 
+  padding: 120px 0px;
+  color: #fff;
+  background: linear-gradient(#69ad31,#69ad31), url('https://via.placeholder.com/1284x500.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center; 
+}
+
+.testimonial h6 { 
+  margin-bottom: 24px;
+  font-size: 35px;
+}
+
+.testimonials-block p:first-of-type {
+  padding: 0px 105px; 
+  margin: 75px 0px 25px 0px;
+  line-height: 30px;
+}
+
+.testimonials-block p:last-of-type { text-transform: capitalize; }
+
+.testimonials-block li:not(:first-child) { display: none; }
+
+.testimonials-block li:last-child span { text-transform: uppercase; }
+
+.slider-dots a {
+  width: 12px;
+  height: 12px;
+  margin: 30px 12px 0px 0px;
+  border-radius: 50%;
+  background:#fff;
+}
+
+.contact-us { 
+  padding: 102px 0px 90px 0px;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+.contact-us h6 {
+  margin-bottom: 25px;
+  font-size: 32px;
+  text-transform: capitalize;
+}
+
+.contact-us .short-line + p {
+  margin: 22px 0px 45px 0px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-content:center;
+}
+
+.contact-info p:first-of-type {
+  font-size: 18px;
+  margin: 10px 0px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.contact-info p, .contact-us address { 
+  padding: 0px 15px;
+  line-height: 20px;
+ }
+
+.leavemsg { 
+  margin: 40px 0px;
+  color: #000;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.contactform { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content:center;
+}
+
+.contactform li{ margin-bottom: 17px; }
+
+.contactform li:first-child { 
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
+
+.form-group { 
+  margin-left: 5%;
+}
+.contactform input[type="text"], 
+.contactform input[type="email"] { padding: 12px 20%; }
+
+textarea { 
+  width: 589px;
+  height: 120px;
+  margin-left: 3%;
+  /* padding: 30px 15%; */
+}
+
+input[type="submit"] { 
+  padding: 15px;
+  border-radius: 6px;
+  background-color: #69ac31;
+  color: #fff;
+  text-transform: uppercase;
+ }
 /*=================================
   main styling ends here
 =================================*/
@@ -285,6 +428,25 @@ p { color: #666; }
 /*=================================
   footer styling starts here
 =================================*/ 
+
+footer {
+  padding: 40px 0px 30px 0px;
+  background-color:#363636;
+  text-align: center;
+}
+
+.footer-social { margin-bottom: 48px; }
+
+.footer-social .fa{
+ padding:10px;
+ margin-left: 2%;
+ border-radius: 50%;
+ background-color: #464646;
+ color: #68aa30;
+ font-size: 20px;
+}
+
+.footer-social li { margin-left: 3%; }
 
  /*=================================
   footer styling ends here
