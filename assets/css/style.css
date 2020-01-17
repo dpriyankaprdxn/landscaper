@@ -134,21 +134,21 @@ nav a {
   text-transform: uppercase;
 }
 
-nav a:hover, .active { color: #69ad31; }
+.active { color: #69ad31; }
 
 .toggle { 
-    padding: 2px 2%;
+  padding: 2px 2%;
   border:1px solid #9a9a9a;
   display: none;
   background:  #363636;
 }
 
 .toggle span { 
-width: 90px;
-    padding: 4px 1%;
-    margin: 18px 2px;
-    display: block;
-    background: #69ad31;
+  width: 90px;
+  padding: 4px 1%;
+  margin: 18px 2px;
+  display: block;
+  background: #69ad31;
 }
 
 /*=================================
@@ -198,12 +198,7 @@ p, address, .contact-info a { color: #666; }
   text-transform: uppercase;
  }
 
- .banner-text a:hover,
- .landscaper a:hover {
-  border:1px solid  #69ac31;
-  background-color:  #fff;
-  color: #69ac31;
- }
+
 /*  Banner styling end here */
 
 .landscaper ul {
@@ -293,6 +288,7 @@ h4 { font-size:22px; }
   text-transform: capitalize;
 }
 
+.our-services li { width: 48%; }
 .our-services li p{
   padding: 0px 3px;
   font-size: 14px;
@@ -327,11 +323,6 @@ h4 { font-size:22px; }
   color: #666;
 }
 
-.project-gallery-menu .active, .project-gallery-menu a:hover { 
-  background-color: #69ac31;
-  color: #fff;
-}
-
 .project-gallery ul:last-of-type {
   display: flex;
   flex-wrap: wrap;
@@ -340,9 +331,6 @@ h4 { font-size:22px; }
 
 .project-gallery ul:last-of-type li { margin-bottom: 32px; }
 
-.project-gallery a:hover {
-  transform: scale(1.1);
-}
 
 .testimonial { 
   padding: 120px 0px;
@@ -390,7 +378,6 @@ h4 { font-size:22px; }
   background:#fff;
 }
 
-.silder-dots a:hover { color:  grey; }
 
 .contact-us { 
   padding: 102px 0px 90px 0px;
@@ -490,9 +477,35 @@ footer a:hover { color: #68aa30; }
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+/*For remove hover effets*/
+@media only screen and (min-width: 1024px) {
 
- 
+  nav a:hover, .active { color: #69ad31; }
+
+.banner-text a:hover,
+ .landscaper a:hover {
+  border:1px solid  #69ac31;
+  background-color:  #fff;
+  color: #69ac31;
+ }
+
+.project-gallery-menu .active, .project-gallery-menu a:hover { 
+  background-color: #69ac31;
+  color: #fff;
+}
+
+.project-gallery a:hover {
+  transform: scale(1.1);
+}
+
+.silder-dots a:hover { color:  grey; }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.menu { width:100%; }
 
 .toggle { 
   display:block;
@@ -503,4 +516,57 @@ footer a:hover { color: #68aa30; }
 display: block; 
 }
 
-}  
+nav { 
+  display: none;
+  width: 100%;
+  margin: 120px auto 0px auto;
+}
+
+nav li {
+margin: 0 auto; 
+  display: block;
+  width: 100%;
+}
+
+nav a {
+  display:block;
+  width: 100%;
+  padding: 8px 0%;
+  margin-right: 11px;
+  color: #9a9a9a;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.banner-text p{
+  width: 70%;
+}
+
+.banner-text a {
+  width: 30%;
+}
+
+.landscaper ul, 
+.our-services ul{ flex-direction: column; }
+
+.landscaper li { margin-bottom: 50px; }
+
+.our-services li { 
+  width: 100%;
+  margin-bottom:40px;
+}
+
+.project-gallery-menu li {
+  width: 100%;
+  margin-bottom: 15px; 
+  display: block;
+}
+
+.project-gallery-menu a {
+  width: 100% ;
+  margin:0; 
+}
+
+}
